@@ -15,15 +15,22 @@ class App extends Component {
   DecreaseItem = () => {
     this.setState({ clicks: this.state.clicks - 1 });
   }
+
+  DecreaseItemTwo = () => {
+    this.setState({ clicks: this.state.clicks - 2 });
+  }
+
   ToggleClick = () => {
     this.setState({ show: !this.state.show });
   }
+
 
   render() {
     return (
       <div>
         <button onClick={this.IncrementItem}>Click to increment by 1</button>
         <button onClick={this.DecreaseItem}>Click to decrease by 1</button>
+        <button onClick={this.DecreaseItemTwo}>Click to decrease by 2</button>
         <button onClick={this.ToggleClick}>
           { this.state.show ? 'Hide number' : 'Show number' }
         </button>
